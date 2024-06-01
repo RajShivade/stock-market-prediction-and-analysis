@@ -194,7 +194,7 @@ stocks_data = stocks.drop(['Item'], axis=1)
 
 By following these steps, the program is set up to preprocess the stock market data effectively, ensuring it is ready for accurate and efficient predictive modeling using neural networks.
 
-# From here the training n testing of data set is being started : 
+From here the training n testing of data set is being started : 
 
 X = stocks_data
 # .drop(['Item'], axis=1)  # Replace 'TargetColumn' with the actual name of your target column
