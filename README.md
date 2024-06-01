@@ -11,7 +11,7 @@ The primary objective is to predict future stock prices based on historical stoc
 
 To predict stock prices, we need the following data points:
 
-Date: The specific trading day.
+- Date: The specific trading day.
 
 Open Price: The price of the stock at market open.
 
