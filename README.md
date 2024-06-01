@@ -13,15 +13,15 @@ To predict stock prices, we need the following data points:
 
 - Date: The specific trading day.
 
-Open Price: The price of the stock at market open.
+- Open Price: The price of the stock at market open.
 
-High Price: The highest price of the stock during the trading day.
+- High Price: The highest price of the stock during the trading day.
 
-Low Price: The lowest price of the stock during the trading day.
+- Low Price: The lowest price of the stock during the trading day.
 
-Close Price: The price of the stock at market close.
+- Close Price: The price of the stock at market close.
 
-Volume: The number of shares traded during the day.
+- Volume: The number of shares traded during the day.
 
 These data points are typically collected from financial websites, stock exchanges, or trading platforms.
 
@@ -29,19 +29,19 @@ These data points are typically collected from financial websites, stock exchang
 
 The approach involves several key steps:
 
-Data Collection: Gather historical stock price data for the desired stock(s).
+- Data Collection: Gather historical stock price data for the desired stock(s).
 
-Data Preprocessing: Clean the data to handle missing values and normalize it to ensure all features contribute equally to the model.
+- Data Preprocessing: Clean the data to handle missing values and normalize it to ensure all features contribute equally to the model.
 
-Feature Engineering: Create additional features that may help the model, such as moving averages, volatility, or momentum indicators.
+- Feature Engineering: Create additional features that may help the model, such as moving averages, volatility, or momentum indicators.
 
-Model Selection: Choose an appropriate machine learning model for prediction.
+- Model Selection: Choose an appropriate machine learning model for prediction.
 
-Model Training: Train the model using historical data.
+- Model Training: Train the model using historical data.
 
-Model Evaluation: Assess the model's performance using evaluation metrics.
+- Model Evaluation: Assess the model's performance using evaluation metrics.
 
-Prediction: Use the trained model to predict future stock prices.
+- Prediction: Use the trained model to predict future stock prices.
 
 # Implementation:
 
@@ -305,27 +305,27 @@ Here is step by step explination
 
 # Model Building:
 
-Sequential Model: The model is initialized as a sequential container for layers.
+- Sequential Model: The model is initialized as a sequential container for layers.
 
-LSTM Layer: Adds an LSTM layer with 50 units, suitable for capturing temporal dependencies in sequential data. The input shape is defined by the unroll length and the number of features.
+- LSTM Layer: Adds an LSTM layer with 50 units, suitable for capturing temporal dependencies in sequential data. The input shape is defined by the unroll length and the number of features.
 
-Dropout Layer: Adds a dropout layer to reduce overfitting by randomly setting a fraction of input units to 0 during training.
+- Dropout Layer: Adds a dropout layer to reduce overfitting by randomly setting a fraction of input units to 0 during training.
 
-Dense Layer: Adds a dense layer with a single neuron for the output.
+- Dense Layer: Adds a dense layer with a single neuron for the output.
 
-Activation Layer: Uses a linear activation function suitable for regression tasks.
+- Activation Layer: Uses a linear activation function suitable for regression tasks.
 
-Compilation: Compiles the model with mean squared error loss, Adam optimizer, and mean squared error metric for evaluation.
+- Compilation: Compiles the model with mean squared error loss, Adam optimizer, and mean squared error metric for evaluation.
 
 # Training the Model:
 
-Input Data: X_train_unrolled (features) and y_train (target).
+- Input Data: X_train_unrolled (features) and y_train (target).
 
-Epochs: Set to 10, meaning the model will go through the entire dataset 10 times during training.
+- Epochs: Set to 10, meaning the model will go through the entire dataset 10 times during training.
 
-Batch Size: Set to 32, determining how many samples the model processes before updating the weights.
+- Batch Size: Set to 32, determining how many samples the model processes before updating the weights.
 
-Validation Split: 20% of the training data is used for validation to monitor the model's performance on unseen data during training.
+- Validation Split: 20% of the training data is used for validation to monitor the model's performance on unseen data during training.
 
 Here is last step of the code :- 
 
