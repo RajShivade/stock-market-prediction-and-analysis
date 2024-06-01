@@ -145,8 +145,8 @@ from sklearn.model_selection import StratifiedKFold
 
 stocks = ppd.get_normalised_data(stocks)
 print(stocks.head())
-# Assuming `stocks` DataFrame is already defined and loaded with data
-# Remove the 'Item' column from the data
+ Assuming `stocks` DataFrame is already defined and loaded with data
+ Remove the 'Item' column from the data
 stocks_data = stocks.drop(['Item'], axis=1)
 
 The provided code is part of a workflow to preprocess stock market data, normalize it, and prepare it for modeling using a neural network
@@ -180,8 +180,8 @@ print(stocks.head())
 
 3. Drop Unnecessary Column:- 
 
-# Assuming `stocks` DataFrame is already defined and loaded with data
-# Remove the 'Item' column from the data
+Assuming `stocks` DataFrame is already defined and loaded with data
+Remove the 'Item' column from the data
 stocks_data = stocks.drop(['Item'], axis=1)
 
 ~ To remove the 'Item' column from the stocks DataFrame, as it is not needed for the modeling process. stocks.drop(['Item'], axis=1) removes the 'Item' column. The axis=1 argument specifies that a column is being dropped (as opposed to a row, which would be axis=0).
@@ -346,15 +346,15 @@ The provided code calculates and prints the root mean squared error (RMSE) for t
 This code evaluates the performance of the LSTM model on both the training and testing datasets.
 It calculates the mean squared error (MSE) for each dataset and then computes the square root of the MSE to obtain the RMSE, which provides a more interpretable measure of the error in the same units as the target variable.
 
-Calculating RMSE:-
+# Calculating RMSE:-
 The model.evaluate function returns the loss and metrics values, including MSE, for the specified data.
 The second element of the returned list contains the MSE, which is then used to calculate RMSE.
 
-Printing Results:-
+# Printing Results:-
 It prints the training and testing scores in terms of both MSE and RMSE.
 Printing both MSE and RMSE gives a comprehensive understanding of the model's performance in terms of error.
 
-Assessing Model Performance:
+# Assessing Model Performance:
 By calculating and printing RMSE for both training and testing datasets, the code provides insights into how well the LSTM model generalizes to unseen data.
 RMSE is a common metric for regression tasks, and lower values indicate better model performance.
 
