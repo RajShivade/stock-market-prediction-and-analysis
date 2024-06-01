@@ -2,12 +2,12 @@
 
 overview of ther Project :-
 
-Problem Statement:
+# Problem Statement:
 
 The goal of this report is to develop a model that can predict future stock prices using historical data. Accurate stock price predictions can help investors make better decisions, minimize risks, and maximize returns. The challenge lies in handling the complex, volatile nature of stock markets and extracting meaningful patterns from historical data.
 The primary objective is to predict future stock prices based on historical stock data. The challenges include dealing with the volatile nature of the stock market, identifying relevant patterns, and building a model that can generalize well to new data. 
 
-Data Points:
+# Data Points:
 
 To predict stock prices, we need the following data points:
 
@@ -25,7 +25,7 @@ Volume: The number of shares traded during the day.
 
 These data points are typically collected from financial websites, stock exchanges, or trading platforms.
 
-Approach:
+# Approach:
 
 The approach involves several key steps:
 
@@ -43,7 +43,7 @@ Model Evaluation: Assess the model's performance using evaluation metrics.
 
 Prediction: Use the trained model to predict future stock prices.
 
-Implementation:
+# Implementation:
 
 Here in this project i have use the several python library so perform the project .The library are import pandas as pd, import math, import numpy as np .
 here the import is used to make code available from one module top another .
@@ -303,7 +303,7 @@ Here is step by step explination
 
 6. validation_split=0.2:- Specifies the fraction of the training data to be used as validation data. The model uses 20% of the training data for validation to evaluate its performance on unseen data during training. This helps monitor overfitting and generalization.
 
-~ Model Building:
+# Model Building:
 
 Sequential Model: The model is initialized as a sequential container for layers.
 
@@ -317,7 +317,7 @@ Activation Layer: Uses a linear activation function suitable for regression task
 
 Compilation: Compiles the model with mean squared error loss, Adam optimizer, and mean squared error metric for evaluation.
 
-~ Training the Model:
+# Training the Model:
 
 Input Data: X_train_unrolled (features) and y_train (target).
 
@@ -342,7 +342,7 @@ print('Test Score: %.8f MSE (%.8f RMSE)' % (test_mse, test_rmse))
 
 The provided code calculates and prints the root mean squared error (RMSE) for the training and testing datasets. Let's break down its purpose and how it fits into the program:
 
-Model Evaluation:-
+# Model Evaluation:-
 This code evaluates the performance of the LSTM model on both the training and testing datasets.
 It calculates the mean squared error (MSE) for each dataset and then computes the square root of the MSE to obtain the RMSE, which provides a more interpretable measure of the error in the same units as the target variable.
 
@@ -360,7 +360,7 @@ RMSE is a common metric for regression tasks, and lower values indicate better m
 
 By including these evaluation metrics in the program, you can gain insights into the effectiveness of the LSTM model for predicting stock volumes based on historical data.
 
-Final Outcome:
+# Final Outcome:
 
 Train Score: 0.00063452 MSE (0.02518964 RMSE)
 Test Score: 0.00020506 MSE (0.01431995 RMSE)
@@ -369,7 +369,7 @@ After training and evaluating the model, the final outcome is a set of predicted
 
 This documentation provides a step-by-step guide to stock market analysis and prediction, ensuring even beginners can understand and implement the process.
 
-Conclusion:
+# Conclusion:
 
 Stock market prediction is complex due to market volatility. However, using historical data and deep learning models like LSTM networks with TensorFlow and Keras, we can make reasonably accurate predictions to assist in investment decisions. Continuous monitoring and model refinement are essential to maintain accuracy.
 
