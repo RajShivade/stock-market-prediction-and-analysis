@@ -47,7 +47,8 @@ The approach involves several key steps:
 
 Here in this project i have use the several python library so perform the project .The library are import pandas as pd, import math, import numpy as np .
 here the import is used to make code available from one module top another .
- **1 import pandas as pd :-** Pandas is usually imported under the pd alias. alias:
+
+**1 import pandas as pd :-** Pandas is usually imported under the pd alias. alias:
 
 **2 import math:-** Python has also a built-in module called math , which extends the list of mathematical functions
 
@@ -74,11 +75,11 @@ Now, the next is
 6 from sklearn.preprocessing import MinMaxScaler:- This imports the MinMaxScaler class from the sklearn.preprocessing module, used for scaling numerical features to a specified range (usually between 0 and 1).
 
 The next part is :
-# 1 import preprocess_data as ppd :- This imports the preprocess_data module and assigns it an alias ppd, likely containing functions for data preprocessing tasks.
+**1 import preprocess_data as ppd** :- This imports the preprocess_data module and assigns it an alias ppd, likely containing functions for data preprocessing tasks.
 
-# 2 import visualize as vs :- This imports the visualize module and assigns it an alias vs, likely containing functions for data visualization tasks.
+**2 import visualize as vs :-** This imports the visualize module and assigns it an alias vs, likely containing functions for data visualization tasks.
 
-# 3 import stocks_data as sd :- This imports the stocks_data module and assigns it an alias sd, likely containing functions or data related to stock market data manipulation or retrieval.
+**3 import stocks_data as sd :-** This imports the stocks_data module and assigns it an alias sd, likely containing functions or data related to stock market data manipulation or retrieval.
 
 Then we have taken a .csv file here by showing   
 df = pd.read_csv('google.csv')
