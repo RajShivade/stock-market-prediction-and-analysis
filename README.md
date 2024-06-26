@@ -11,17 +11,17 @@ The primary objective is to predict future stock prices based on historical stoc
 
 To predict stock prices, we need the following data points:
 
-- Date: The specific trading day.
+- **Date:**  The specific trading day.
 
-- Open Price: The price of the stock at market open.
+- **Open Price:**  The price of the stock at market open.
 
-- High Price: The highest price of the stock during the trading day.
+- **High Price:**  The highest price of the stock during the trading day.
 
-- Low Price: The lowest price of the stock during the trading day.
+- **Low Price:**  The lowest price of the stock during the trading day.
 
-- Close Price: The price of the stock at market close.
+- **Close Price:**  The price of the stock at market close.
 
-- Volume: The number of shares traded during the day.
+- **Volume:**  The number of shares traded during the day.
 
 These data points are typically collected from financial websites, stock exchanges, or trading platforms.
 
@@ -29,29 +29,29 @@ These data points are typically collected from financial websites, stock exchang
 
 The approach involves several key steps:
 
-- Data Collection: Gather historical stock price data for the desired stock(s).
+- **Data Collection:**  Gather historical stock price data for the desired stock(s).
 
-- Data Preprocessing: Clean the data to handle missing values and normalize it to ensure all features contribute equally to the model.
+- **Data Preprocessing:**  Clean the data to handle missing values and normalize it to ensure all features contribute equally to the model.
 
-- Feature Engineering: Create additional features that may help the model, such as moving averages, volatility, or momentum indicators.
+- **Feature Engineering:**  Create additional features that may help the model, such as moving averages, volatility, or momentum indicators.
 
-- Model Selection: Choose an appropriate machine learning model for prediction.
+- **Model Selection:**  Choose an appropriate machine learning model for prediction.
 
-- Model Training: Train the model using historical data.
+- **Model Training:**  Train the model using historical data.
 
-- Model Evaluation: Assess the model's performance using evaluation metrics.
+- **Model Evaluation:**  Assess the model's performance using evaluation metrics.
 
-- Prediction: Use the trained model to predict future stock prices.
+- **Prediction:**  Use the trained model to predict future stock prices.
 
 # Implementation:
 
 Here in this project i have use the several python library so perform the project .The library are import pandas as pd, import math, import numpy as np .
 here the import is used to make code available from one module top another .
-1 import pandas as pd :- Pandas is usually imported under the pd alias. alias:
+ **1 import pandas as pd :-** Pandas is usually imported under the pd alias. alias:
 
-2 import math:- Python has also a built-in module called math , which extends the list of mathematical functions
+**2 import math:-** Python has also a built-in module called math , which extends the list of mathematical functions
 
-3 Import Numpy as np:- a library that provides a set of high level functions and features for performing data analysis and manipulation
+**3 import Numpy as np:-** a library that provides a set of high level functions and features for performing data analysis and manipulation
 
 Now, the next is 
  from IPython.display import display
@@ -74,11 +74,11 @@ Now, the next is
 6 from sklearn.preprocessing import MinMaxScaler:- This imports the MinMaxScaler class from the sklearn.preprocessing module, used for scaling numerical features to a specified range (usually between 0 and 1).
 
 The next part is :
-1 import preprocess_data as ppd :- This imports the preprocess_data module and assigns it an alias ppd, likely containing functions for data preprocessing tasks.
+# 1 import preprocess_data as ppd :- This imports the preprocess_data module and assigns it an alias ppd, likely containing functions for data preprocessing tasks.
 
-2 import visualize as vs :- This imports the visualize module and assigns it an alias vs, likely containing functions for data visualization tasks.
+# 2 import visualize as vs :- This imports the visualize module and assigns it an alias vs, likely containing functions for data visualization tasks.
 
-3 import stocks_data as sd :- This imports the stocks_data module and assigns it an alias sd, likely containing functions or data related to stock market data manipulation or retrieval.
+# 3 import stocks_data as sd :- This imports the stocks_data module and assigns it an alias sd, likely containing functions or data related to stock market data manipulation or retrieval.
 
 Then we have taken a .csv file here by showing   
 df = pd.read_csv('google.csv')
@@ -111,17 +111,17 @@ print("Close  --- mean :", np.mean(stocks['Close']), "  \t Std: ", np.std(stocks
 print("Volume --- mean :", np.mean(stocks['Volume']),"  \t Std: ", np.std(stocks['Volume']),"  \t Max: ", np.max(stocks['Volume']),"  \t Min: ", np.min(stocks['Volume']))
 Here is explanation of each line .
 
-1. Normalization:-
+# 1. Normalization:-
  stocks = ppd.get_normalised_data(stocks)
 
 This line calls the get_normalised_data function from the preprocess_data module (imported as ppd). It normalizes the stocks DataFrame, adjusting the data to a common scale without distorting differences in the ranges of values.
 
-2. Printing the Head of the DataFrame:
+# 2. Printing the Head of the DataFrame:
  print(stocks.head())
 
 This line prints the first five rows of the stocks DataFrame. Printing the head of the DataFrame allows you to inspect the first few entries of your normalized data, ensuring that the normalization process was applied correctly.
 
-3. Printing Statistical Summaries:
+# 3. Printing Statistical Summaries:
  print("\n")
  print("Open   --- mean :", np.mean(stocks['Open']),  "  \t Std: ", np.std(stocks['Open']),  "  \t Max: ", np.max(stocks['Open']),  "  \t Min: ", np.min(stocks['Open']))
  print("Close  --- mean :", np.mean(stocks['Close']), "  \t Std: ", np.std(stocks['Close']), "  \t Max: ", np.max(stocks['Close']), "  \t Min: ", np.min(stocks['Close']))
@@ -151,7 +151,7 @@ stocks_data = stocks.drop(['Item'], axis=1)
 
 The provided code is part of a workflow to preprocess stock market data, normalize it, and prepare it for modeling using a neural network
 
-1. Importing Libraries and Modules:- 
+# 1. Importing Libraries and Modules:- 
 
 from keras.layers import Dense, Activation, Dropout, LSTM
 from keras.models import Sequential
@@ -161,24 +161,24 @@ from sklearn.model_selection import StratifiedKFold
 
 These lines import necessary modules and functions for building and training a neural network model using Keras, and for data preprocessing and evaluation using Scikit-Learn.
 
-~ Dense, Activation, Dropout, LSTM: Layers used to build neural network models.
+~ **Dense, Activation, Dropout, LSTM:** Layers used to build neural network models.
 
-~ Sequential: Model type used in Keras for creating neural networks layer by layer.
+~ **Sequential:** Model type used in Keras for creating neural networks layer by layer.
 
-~ train_test_split: Function to split data into training and testing sets.
+~ **train_test_split:** Function to split data into training and testing sets.
 
-~ mean_squared_error: Metric to evaluate model performance.
+~ **mean_squared_error:** Metric to evaluate model performance.
 
-~ StratifiedKFold: Function for stratified k-fold cross-validation.
+~ **StratifiedKFold:** Function for stratified k-fold cross-validation.
 
-2. Normalize the Data:- 
+# 2. Normalize the Data:- 
 
 stocks = ppd.get_normalised_data(stocks)
 print(stocks.head())
 
 ~ To normalize the stocks DataFrame so that all features have a similar scale, which is crucial for the effective training of machine learning models. get_normalised_data is a function from the preprocess_data module that normalizes the stock data, ensuring that the features are on a similar scale.
 
-3. Drop Unnecessary Column:- 
+# 3. Drop Unnecessary Column:- 
 
 Assuming `stocks` DataFrame is already defined and loaded with data
 Remove the 'Item' column from the data
@@ -186,11 +186,11 @@ stocks_data = stocks.drop(['Item'], axis=1)
 
 ~ To remove the 'Item' column from the stocks DataFrame, as it is not needed for the modeling process. stocks.drop(['Item'], axis=1) removes the 'Item' column. The axis=1 argument specifies that a column is being dropped (as opposed to a row, which would be axis=0).
 
-~ Importing Libraries: Provides necessary tools for model building and evaluation.
+~ **Importing Libraries:** Provides necessary tools for model building and evaluation.
 
-~ Normalization: Ensures that all features are on a similar scale for better model performance.
+~ **Normalization:** Ensures that all features are on a similar scale for better model performance.
 
-~ Dropping 'Item' Column: Removes irrelevant data to focus on useful features for prediction.
+~ **Dropping 'Item' Column:** Removes irrelevant data to focus on useful features for prediction.
 
 By following these steps, the program is set up to preprocess the stock market data effectively, ensuring it is ready for accurate and efficient predictive modeling using neural networks.
 
@@ -224,18 +224,18 @@ print("y_test", y_test.shape)
 
 The provided code is part of a larger program aimed at preparing stock market data for training a machine learning model, specifically an LSTM neural network. The code performs data splitting, reshaping (or "unrolling"), and printing the shapes of the resulting arrays. Let's break down each part and its purpose:
 
-1.Setting up Features and Target:-
+# 1.Setting up Features and Target:-
  X = stocks_data
  y = stocks_data['Volume'] 
 
 ~ X is set to the entire stocks_data DataFrame, and y is set to the 'Volume' column of stocks_data. The aim is to predict the 'Volume' of stocks. X contains all the features, while y is the target variable ('Volume') that the model will learn to predict.
 
-2. Splitting Data:- 
+# 2. Splitting Data:- 
  X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, shuffle=False)
 
 ~ This line splits the data into training and testing sets using an 80/20 split. shuffle=False ensures that the data is split in a time series order. training and testing datasets, allowing the model to be trained on one set of data and evaluated on another, ensuring that the evaluation metrics are unbiased.
 
-3. Defining the Unroll Function:- 
+# 3. Defining the Unroll Function:- 
  def unroll(data, unroll_length):
     result = []
     for i in range(len(data) - unroll_length + 1):
@@ -244,7 +244,7 @@ The provided code is part of a larger program aimed at preparing stock market da
 
 ~  This function takes in a dataset (data) and an unroll_length. It creates overlapping sequences of length unroll_length from the dataset. The unroll function is used to transform the data into a suitable format for training an LSTM model. LSTMs require input data to be in sequences of a fixed length.
 
-4. Unrolling the Data:-
+# 4. Unrolling the Data:-
  unroll_length = 50
 X_train_unrolled = unroll(X_train.values, unroll_length)
 X_test_unrolled = unroll(X_test.values, unroll_length)
@@ -253,7 +253,7 @@ y_test = y_test.values[unroll_length-1:]
 
 ~ These lines use the unroll function to reshape the training and testing datasets into sequences of length unroll_length (50 in this case). The target arrays (y_train and y_test) are also adjusted to match the length of the unrolled data. 
 
-5. Printing Shapes of Unrolled Data:- 
+# 5. Printing Shapes of Unrolled Data:- 
  print("X_train_unrolled", X_train_unrolled.shape)
 print("y_train", y_train.shape)
 print("X_test_unrolled", X_test_unrolled.shape)
@@ -289,7 +289,7 @@ Then this step is followed :-
 
 ~ model.fit(X_train_unrolled, y_train, epochs=10, batch_size=32, validation_split=0.2) :- The line is used to train the LSTM model on the prepared training data.
 
-Here is step by step explination
+# Here is step by step explination
 
 1. model.fit():- The fit method is used to train the model on the given data. It starts the training process where the model learns from the training data.
 
@@ -305,29 +305,29 @@ Here is step by step explination
 
 # Model Building:
 
-- Sequential Model: The model is initialized as a sequential container for layers.
+- **Sequential Model:**  The model is initialized as a sequential container for layers.
 
-- LSTM Layer: Adds an LSTM layer with 50 units, suitable for capturing temporal dependencies in sequential data. The input shape is defined by the unroll length and the number of features.
+- **LSTM Layer:**  Adds an LSTM layer with 50 units, suitable for capturing temporal dependencies in sequential data. The input shape is defined by the unroll length and the number of features.
 
-- Dropout Layer: Adds a dropout layer to reduce overfitting by randomly setting a fraction of input units to 0 during training.
+- **Dropout Layer:**  Adds a dropout layer to reduce overfitting by randomly setting a fraction of input units to 0 during training.
 
-- Dense Layer: Adds a dense layer with a single neuron for the output.
+- **Dense Layer:**  Adds a dense layer with a single neuron for the output.
 
-- Activation Layer: Uses a linear activation function suitable for regression tasks.
+- **Activation Layer:**  Uses a linear activation function suitable for regression tasks.
 
-- Compilation: Compiles the model with mean squared error loss, Adam optimizer, and mean squared error metric for evaluation.
+- **Compilation:**  Compiles the model with mean squared error loss, Adam optimizer, and mean squared error metric for evaluation.
 
 # Training the Model:
 
-- Input Data: X_train_unrolled (features) and y_train (target).
+- **Input Data:**  X_train_unrolled (features) and y_train (target).
 
-- Epochs: Set to 10, meaning the model will go through the entire dataset 10 times during training.
+- **Epochs:** Set to 10, meaning the model will go through the entire dataset 10 times during training.
 
-- Batch Size: Set to 32, determining how many samples the model processes before updating the weights.
+- **Batch Size:** Set to 32, determining how many samples the model processes before updating the weights.
 
-- Validation Split: 20% of the training data is used for validation to monitor the model's performance on unseen data during training.
+- **Validation Split:** 20% of the training data is used for validation to monitor the model's performance on unseen data during training.
 
-Here is last step of the code :- 
+# Here is last step of the code :- 
 
 # RMSE for Training-Testing Data with basic LSTM
 trainScore = model.evaluate(X_train_unrolled, y_train, verbose=0)
