@@ -55,6 +55,7 @@ here the import is used to make code available from one module top another .
 **3 import Numpy as np:-** a library that provides a set of high level functions and features for performing data analysis and manipulation
 
 Now, the next is 
+
  from IPython.display import display
  from sklearn import linear_model
  from sklearn.model_selection import train_test_split
@@ -75,6 +76,7 @@ Now, the next is
 6 from sklearn.preprocessing import MinMaxScaler:- This imports the MinMaxScaler class from the sklearn.preprocessing module, used for scaling numerical features to a specified range (usually between 0 and 1).
 
 The next part is :
+
 **1 import preprocess_data as ppd** :- This imports the preprocess_data module and assigns it an alias ppd, likely containing functions for data preprocessing tasks.
 
 **2 import visualize as vs :-** This imports the visualize module and assigns it an alias vs, likely containing functions for data visualization tasks.
