@@ -29,19 +29,19 @@ These data points are typically collected from financial websites, stock exchang
 
 The approach involves several key steps:
 
-#- **Data Collection:**  Gather historical stock price data for the desired stock(s).
+- **Data Collection:**  Gather historical stock price data for the desired stock(s).
 
-#- **Data Preprocessing:**  Clean the data to handle missing values and normalize it to ensure all features contribute equally to the model.
+- **Data Preprocessing:**  Clean the data to handle missing values and normalize it to ensure all features contribute equally to the model.
 
-#- **Feature Engineering:**  Create additional features that may help the model, such as moving averages, volatility, or momentum indicators.
+- **Feature Engineering:**  Create additional features that may help the model, such as moving averages, volatility, or momentum indicators.
 
-#- **Model Selection:**  Choose an appropriate machine learning model for prediction.
+- **Model Selection:**  Choose an appropriate machine learning model for prediction.
 
-#- **Model Training:**  Train the model using historical data.
+- **Model Training:**  Train the model using historical data.
 
-#- **Model Evaluation:**  Assess the model's performance using evaluation metrics.
+- **Model Evaluation:**  Assess the model's performance using evaluation metrics.
 
-#- **Prediction:**  Use the trained model to predict future stock prices.
+- **Prediction:**  Use the trained model to predict future stock prices.
 
 # Implementation:
 
