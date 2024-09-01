@@ -1,6 +1,6 @@
-# Stock Market Analysis and Prediction :- 
+# Stock Market Analysis and Prediction With Python :-📈 
 
-overview of ther Project :-
+**overview of ther Project :-**
 
 # Problem Statement:
 
